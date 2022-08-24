@@ -21,7 +21,7 @@ favourite web framework.
 """
 from datetime import datetime, timedelta
 import time as t
-import os
+import os, sys
 
 def pomodoro(time_target, time_break, loops):
     time_target = timedelta(seconds=time_target*60)
@@ -63,3 +63,5 @@ def pomodoro(time_target, time_break, loops):
             os.system('say {}'.format(message))
         loops -= 1
 
+
+pomodoro(0.1, 0.1, 2)
